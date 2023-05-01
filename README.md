@@ -1,6 +1,6 @@
-# price_tracker
+# Price Tracker Flutter
 
-A new Flutter project.
+Connecting sockets in Flutter and updating views accordingly.
 
 ## Getting Started
 
