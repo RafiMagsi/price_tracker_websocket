@@ -18,7 +18,7 @@ class HomePage extends GetView<HomeController> {
 
   @override
   StatelessElement createElement() {
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       await controller.connect();
     });
     return super.createElement();
@@ -37,7 +37,7 @@ class HomePage extends GetView<HomeController> {
               stream: controller.streamController.stream,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  WidgetsBinding.instance?.addPostFrameCallback((timeStamp) async {
+                  WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
                     debugPrint(snapshot.data.toString());
                     var response = json.decode(snapshot.data.toString());
                     // If received the Active symbols data

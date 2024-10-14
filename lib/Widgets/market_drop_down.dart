@@ -64,35 +64,41 @@ class MarketDropDown extends StatelessWidget {
               selectedValue?.value = value as FilteredMarket;
               onChange?.call(selectedValue!.value);
             },
-            icon: const Icon(
-              Icons.arrow_forward_ios_outlined,
-            ),
-            iconSize: 14,
-            iconEnabledColor: Colors.white,
-            iconDisabledColor: Colors.grey,
-            buttonHeight: 50,
-            buttonPadding: const EdgeInsets.only(left: 14, right: 14),
-            buttonDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(
-                color: Colors.black26,
+            iconStyleData: const IconStyleData(
+              icon: Icon(
+                Icons.arrow_forward_ios_outlined,
               ),
-              color: Colors.redAccent,
+              iconSize: 14,
+              iconEnabledColor: Colors.white,
+              iconDisabledColor: Colors.grey,
             ),
-            buttonElevation: 2,
-            itemHeight: 40,
-            itemPadding: const EdgeInsets.only(left: 14, right: 14),
-            dropdownMaxHeight: 200,
-            // dropdownWidth: 200,
-            dropdownPadding: null,
-            dropdownDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
-              color: Colors.redAccent,
+            buttonStyleData: ButtonStyleData(
+              height: 50,
+              padding: const EdgeInsets.only(left: 14, right: 14),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: Colors.black26,
+                ),
+                color: Colors.redAccent,
+              ),
+              elevation: 2,
             ),
-            dropdownElevation: 8,
-            scrollbarRadius: const Radius.circular(40),
-            scrollbarThickness: 6,
-            scrollbarAlwaysShow: true,
+
+            dropdownStyleData: DropdownStyleData(
+                maxHeight: 200,
+                padding: const EdgeInsets.only(left: 14, right: 14),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: Colors.redAccent,
+                ),
+                elevation: 8,
+                scrollbarTheme: const ScrollbarThemeData(
+                  radius: Radius.circular(40),
+                  thickness: WidgetStatePropertyAll(6),
+                )),
+            menuItemStyleData: const MenuItemStyleData(height: 40),
+
             // offset: const Offset(-20, 0),
           ),
         ),

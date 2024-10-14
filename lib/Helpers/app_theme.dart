@@ -10,9 +10,9 @@ class AppTheme {
     return ThemeData(
       shadowColor: Colors.grey.withOpacity(0.15),
       textTheme: TextTheme(
-        bodyText2: AppStyles.titleStyle(color: AppColors.textColor).copyWith(fontSize: 14),
-        subtitle1: AppStyles.titleStyle(),
-        subtitle2: AppStyles.subTitleStyle(),
+        bodyMedium: AppStyles.titleStyle(color: AppColors.textColor).copyWith(fontSize: 14),
+        titleMedium: AppStyles.titleStyle(),
+        titleSmall: AppStyles.subTitleStyle(),
       ),
       dividerColor: Colors.transparent,
       scaffoldBackgroundColor: AppColors.primary,
@@ -21,7 +21,6 @@ class AppTheme {
       ),
       primaryColor: AppColors.buttonColor,
       brightness: Brightness.light,
-      backgroundColor: AppColors.primary,
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: AppColors.buttonColor,
       ),
@@ -34,7 +33,10 @@ class AppTheme {
       ),
       appBarTheme: AppBarTheme(
         centerTitle: false, // 1
-        titleTextStyle: AppStyles.titleStyle(color: AppColors.textColor).copyWith(fontSize: 20, fontWeight: FontWeight.bold),
+        titleTextStyle: AppStyles.titleStyle(color: AppColors.textColor).copyWith(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
         iconTheme: const IconThemeData(
           color: AppColors.textColor,
           size: 22,
@@ -72,6 +74,17 @@ class AppTheme {
         ),
         disabledBorder: InputBorder.none,
       ),
+      colorScheme: const ColorScheme(
+        primary: Color(0xFFFF8383),
+        secondary: Color(0xFF4D1F7C),
+        surface: Color(0xFF1F1929),
+        error: Colors.redAccent,
+        onError: Colors.white,
+        onPrimary: Colors.white,
+        onSecondary: Colors.white,
+        onSurface: Colors.white,
+        brightness: Brightness.light,
+      ),
     );
   }
 
@@ -80,9 +93,9 @@ class AppTheme {
     return ThemeData(
       shadowColor: Colors.grey.withOpacity(0.025),
       textTheme: TextTheme(
-        bodyText2: AppStyles.titleStyle(color: AppColors.textColorD).copyWith(fontSize: 14),
-        subtitle1: AppStyles.titleStyle(color: AppColors.textColorD),
-        subtitle2: AppStyles.subTitleStyle(color: AppColors.textSubtitleD),
+        bodyMedium: AppStyles.titleStyle(color: AppColors.textColorD).copyWith(fontSize: 14),
+        titleMedium: AppStyles.titleStyle(color: AppColors.textColorD),
+        titleSmall: AppStyles.subTitleStyle(color: AppColors.textSubtitleD),
       ),
       dividerColor: Colors.transparent,
       scaffoldBackgroundColor: AppColors.primaryD,
@@ -91,7 +104,6 @@ class AppTheme {
       ),
       primaryColor: AppColors.buttonColor,
       brightness: Brightness.dark,
-      backgroundColor: AppColors.primaryD,
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: AppColors.buttonColor,
       ),
@@ -144,6 +156,17 @@ class AppTheme {
           borderSide: BorderSide.none,
         ),
         disabledBorder: InputBorder.none,
+      ),
+      colorScheme: const ColorScheme(
+        primary: Color(0xFFFF8383),
+        secondary: Color(0xFF4D1F7C),
+        surface: Color(0xFF1F1929),
+        error: Colors.redAccent,
+        onError: Colors.white,
+        onPrimary: Colors.white,
+        onSecondary: Colors.white,
+        onSurface: Colors.white,
+        brightness: Brightness.dark,
       ),
     );
   }
